@@ -1,33 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="index.css">
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="/main.js"></script>
 </head>
-
-
 <body>
 
 
 
-<div class="titel">
-    <h1>Rentschler Biopharma</h1>
-</div>
-<div class="logo">
-    <img src="src/img.png" height="322" width="322"/>
+<div th:insert="~{fragments/header.html ::header }"></div>
+
+<div class="columns is-fullheight">
+    <div th:insert="~{fragments/menu.html ::menu }"></div>
+    <main class="column m-4">
+        <!-- Dashboard Header -->
+        <div class="level mb-5">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="title">Dashboard</div>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <button type="button" class="button is-small is-info is-light">
+                        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+                        <span>Datum</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistiken -->
+        <div class="columns is-multiline">
+            <div class="column is-4">
+                <div class="box has-text-centered">
+                    <p class="heading">Rezepte insgesamt</p>
+                    <p class="title" th:text="${allRecipes}">0</p>
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="box has-text-centered">
+                    <p class="heading">Vegetarisch</p>
+                    <p class="title" th:text="${vegiRecipes}">20</p>
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="box has-text-centered">
+                    <p class="heading">Vegan</p>
+                    <p class="title" th:text="${veganRecipes}">20</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-multiline">
+            <!-- Zufälliger Rezeptvorschlag -->
+            <div class="column is-3">
+                <div class="box">
+                    <h2 class="title is-4 mb-4">Zufälliger Rezeptvorschlag</h2>
+                    <div class="card card recipe-card" th:if="${recipe != null}">
+                        <div th:insert="~{fragments/recipeCard.html ::recipeCard}"></div>
+                    </div>
+                    <div th:if="${recipe == null}">
+                        <p>Noch kein Rezept vorhanden</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
 </div>
 
-<div class ="center">
-    <button class ="button" onclick="function()">Kek</button>
-    <script>
-        funtion function(){
-        alert("clicked");
-        }
-    </script>
-</div>
 
 
-<div class="image_container">
-</div>
-<p></p>
+
+
+
 </body>
 </html>
