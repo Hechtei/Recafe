@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recafe</title>
+
+    <!-- Externe CSS-Datei -->
     <link rel="stylesheet" href="src/main/resources/static/styles.css">
+    <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+
     <style>
+        /* Navbar-Anpassungen */
         .navbar.is-fixed-height {
-          min-height: 5rem; /* gleiche Höhe wie Bulma-Standard */
+            min-height: 5rem; /* gleiche Höhe wie Bulma-Standard */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
+
         .navbar-item {
-          white-space: nowrap; /* verhindert Zeilenumbruch */
+            white-space: nowrap; /* verhindert Zeilenumbruch */
+        }
+
+        /* Responsive Logo */
+        .navbar-item img {
+            max-height: 2.5rem;
+            height: auto;
+        }
+
+        /* Optional: Abstand zwischen den Links */
+        .navbar-links {
+            gap: 1.5rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar is-primary is-fixed-height" role="navigation" aria-label="main navigation">
-          <div class="container is-flex is-justify-content-center is-align-items-center">
-            
-            <!-- Logo -->
-            <a class="navbar-item" href="/Recafe">
-              <img src="/logo.png" alt="Logo" style="max-height: 2.5rem;">
-            </a>
-      
-            <!-- Links -->
-            <div class="is-flex">
-              <a class="navbar-item" href="/Recafe">Home</a>
-              <a class="navbar-item" href="/Recafe/about.html">Über uns</a>
-              <a class="navbar-item" href="/Recafe/contact.html">Kontakt</a>
+        <nav class="navbar is-primary is-fixed-height" role="navigation" aria-label="Hauptnavigation">
+            <div class="container is-flex is-justify-content-space-between is-align-items-center">
+                
+                <!-- Logo -->
+                <a class="navbar-item" href="/Recafe" aria-label="Startseite">
+                    <img src="/logo.png" alt="Recafe Logo">
+                </a>
+
+                <!-- Navigationslinks -->
+                <div class="navbar-links is-flex">
+                    <a class="navbar-item" href="/Recafe">Home</a>
+                    <a class="navbar-item" href="/Recafe/about.html">Über uns</a>
+                    <a class="navbar-item" href="/Recafe/contact.html">Kontakt</a>
+                </div>
             </div>
-            
-          </div>
         </nav>
- 
-      
+    </header>
 </body>
 </html>
-
