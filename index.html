@@ -1,45 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>Index</title>
+    <title>ReCafe-Laupheim</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="src/main/resources/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel/dist/css/bulma-carousel.min.css">
+
     <link rel="icon" type="image/png" href="/logo.png">
     <script src="src/main/resources/static/main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+
+    <style>
+ 
+
+   
+    </style>
 </head>
 <body>
 
-
-
 <div id="header"></div>
 
+<!-- Content mit Begrüßung -->
+<!-- 
 <div class="columns is-fullheight">
-   
     <main class="column m-4">
-        <!-- Dashboard Header -->
+        
+       
         <div class="level mb-5">
             <div class="level-left">
-                <div class="level-item">
-                    <div class="title">Willkommen bei ReCafé!</div>
-                </div>
+            <div class="level-item">
+                <div class="title">Willkommen bei ReCafé!</div>
+            </div>
             </div>
         </div>
-
-        <!-- Text -->
+        
         <div class="level mb-5">
             <div class="level-center">
-                <div class="level-item">
-                    <div class="title">Wir freuen uns, dass du hier bist :) </div>
-                </div>
+            <div class="level-item">
+                <div class="title">Wir freuen uns, dass du hier bist :) </div>
+            </div>
             </div>
         </div>
-
+       
     </main>
+</div>
+-->
+<!-- Carousel Full Width -->
+
+<div id="carousel-demo" class="carousel">
+
+    <div class="item-1 carousel-item">
+        <img src="src/main/resources/static/Pics/innenaufnahme-eines-cafes-mit-stuhlen-nahe-der-bar-mit-holztischen.jpg" alt="Bild 1">
+        <div class="carousel-text">
+            Willkommen bei ReCafé
+        </div>
+    </div>
+
+    <div class="item-2 carousel-item">
+        <img src="src/main/resources/static/Pics/kaffeemaschine-fullen-zwei-tassen-gleichzeitig.jpg" alt="Bild 2">
+        <div class="carousel-text">
+            Dein Café zum Wohlfühlen
+        </div>
+    </div>
+
+    <div class="item-3 carousel-item">
+        <img src="src\main\resources\static\Pics\deva-williamson-S2jw81lfrG0-unsplash.jpg" alt="Bild 3">
+        <div class="carousel-text">
+            Frischer Kaffee & Kuchen
+        </div>
+    </div>
 
 </div>
 
-</body>
 
+
+<!-- JS: FontAwesome + Carousel -->
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel/dist/js/bulma-carousel.min.js"></script>
+
+<script>
+    // Initialisiere das Carousel
+    document.addEventListener('DOMContentLoaded', () => {
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: true,
+            pauseOnHover: true
+        });
+    });
+</script>
+
+</body>
 </html>
