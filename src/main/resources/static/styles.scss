@@ -2,7 +2,7 @@
 
 @use "../node_modules/bulma/sass" with (
   $family-primary: '"SUSE", sans-serif',
-  $primary: hsl(259, 86%, 61%),
+  $primary: hsl(147, 79%, 43%),
   $link: hsl(259, 100%, 45%),
     $info: hsl(207, 90%, 64%),
     $success: hsl(141, 53%, 53%),
@@ -23,5 +23,6 @@
 );
 @use "aside";
 @use "card";
+
 
 @import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");

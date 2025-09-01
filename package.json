@@ -1,16 +1,25 @@
 {
-  "name": "rezeptesammler",
+  "name": "recafe.github.io",
   "version": "1.0.0",
-  "description": "Rezeptesammler",
+  "description": "",
+  "homepage": "https://github.com/Hechtei/Recafe.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/Hechtei/Recafe.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hechtei/Recafe.github.io.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "main.js",
   "scripts": {
     "build": "sass --load-path=node_modules src/main/resources/static/styles.scss src/main/resources/static/styles.css",
     "start": "npm run build -- --watch"
   },
-  "author": "Julian Hecht",
-  "license": "ISC",
   "dependencies": {
-    "bulma": "git@github.com:jgthms/bulma.git#6374a8094d2af8d94368d51946719cd614d6f84f",
-    "sass": "^1.81.0"
+    "bulma": "^1.0.4",
+    "sass": "^1.91.0"
   }
 }

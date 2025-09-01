@@ -1,3 +1,22 @@
+
+function loadFragment(id, file) {
+  fetch(file)
+    .then(res => {
+      if (!res.ok) throw new Error(`Fehler beim Laden von ${file}`);
+      return res.text();
+    })
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+    })
+    .catch(err => console.error(err));
+}
+
+// Nach DOM-Load Header + Footer einfügen
+document.addEventListener("DOMContentLoaded", () => {
+  loadFragment("header", "src/main/resources/templates/header.html");
+  loadFragment("footer", "footer.html");
+});
+
 // Modal öffnen
 function openModal(modalId) {
     document.querySelector(modalId).classList.add('is-active');
