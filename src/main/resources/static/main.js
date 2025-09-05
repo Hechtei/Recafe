@@ -14,7 +14,7 @@ function loadFragment(id, file) {
 // Nach DOM-Load Header + Footer einfügen
 document.addEventListener("DOMContentLoaded", () => {
   loadFragment("header", "src/main/resources/templates/header.html");
-  loadFragment("footer", "footer.html");
+  loadFragment("footer", "src/main/resources/templates/footer.html");
 });
 
 // Modal öffnen

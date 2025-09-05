@@ -11,46 +11,65 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 
     <style>
-        /* Navbar-Anpassungen */
-        .navbar.is-fixed-height {
-            min-height: 5rem; /* gleiche Höhe wie Bulma-Standard */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        .navbar {
+          box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
-
-        .navbar-item {
-            white-space: nowrap; /* verhindert Zeilenumbruch */
-        }
-
-        /* Responsive Logo */
         .navbar-item img {
-            max-height: 2.5rem;
-            height: auto;
+          max-height: 3rem;
         }
-
-        /* Optional: Abstand zwischen den Links */
-        .navbar-links {
-            gap: 1.5rem;
-        }
-    </style>
-</head>
-<body>
+      </style>
+    </head>
+    <body>
     <header>
-        <nav class="navbar is-primary is-fixed-height" role="navigation" aria-label="Hauptnavigation">
-            <div class="container is-flex is-justify-content-space-between is-align-items-center">
-                
-                <!-- Logo -->
-                <a class="navbar-item" href="/Recafe" aria-label="Startseite">
-                    <img src="/logo.png" alt="Recafe Logo">
+      <nav class="navbar is-primary is-spaced" role="navigation" aria-label="Hauptnavigation">
+        <div class="container">
+          <!-- Navbar Brand (Logo + Burger) -->
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/Recafe" aria-label="Startseite">
+              <img src="/logo.png" alt="Recafe Logo">
+            </a>
+    
+            <!-- Burger Menü für Mobile -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+    
+          <!-- Navbar Menu -->
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active" href="/Recafe">Home</a>
+              <a class="navbar-item" href="/Recafe/about.html">Über uns</a>
+              <a class="navbar-item" href="/Recafe/contact.html">Kontakt</a>
+    
+              <!-- Social Media -->
+              <div class="navbar-item">
+                <a href="https://www.instagram.com/"  title="instagram" target="_blank" class="icon is-large has-text-light" >
+                  <i class="fab fa-instagram fa-2x"></i>
                 </a>
-
-                <!-- Navigationslinks -->
-                <div class="navbar-links is-flex">
-                    <a class="navbar-item" href="/Recafe">Home</a>
-                    <a class="navbar-item" href="/Recafe/about.html">Über uns</a>
-                    <a class="navbar-item" href="/Recafe/contact.html">Kontakt</a>
-                </div>
+                <a href="https://www.facebook.com/" title="facebook" target="_blank" class="icon  is-large has-text-light ml-2">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
-</body>
+    
+    <!-- JS: Burger Menü aktivieren -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+    
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+    </script>
+ </body>
 </html>
