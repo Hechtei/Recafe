@@ -24,32 +24,68 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             border-radius: 8px;
         }
+
+        body {
+      background-color: #f4efe6; /* sanftes Beige statt grelles Weiß */
+        }
+
+    .hero {
+      
+                
+             
+      color: #fff;
+    }
+
+    .box-shadow {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      background-color: #fff;
+    }
+
+    .image-shadow img {
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    h2.title {
+      color: #3e2f20; /* warme Kaffee-Farbe */
+    }
     </style>
 
 </head>
-<body class="has-background-light">
+<body class="has-background-primary-95">
 
 <div id="header"></div>
 
-<div class="title has-text-centered mt-6">Hey, dürfen wir uns vorstellen?</div>
+<section class="hero is-small" >
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1 has-text-weight-bold" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.4);">
+                Willkommen bei ReCafé Laupheim
+            </h1>
+            <h2 class="subtitle is-3 has-text-weight-medium" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.3);">
+                Dürfen wir uns vorstellen?
+            </h2>
+            
+        </div>
+    </div>
+
+
 
 <!-- Über uns Sektion -->
-<section class="section">
+<section class="section" id="about">
     <div class="container">
-
         <!-- Erste Reihe -->
         <div class="columns is-vcentered mb-6">
             <div class="column is-half">
-                
                 <h2 class="title is-3">Unsere Mission</h2>
                 <p class="content has-text-black">
                     Bei ReCafe-Laupheim möchten wir einen Ort schaffen, an dem sich Menschen begegnen, austauschen und genießen können. 
                     Nachhaltigkeit, Qualität und eine freundliche Atmosphäre stehen bei uns an erster Stelle.
                 </p>
-                
             </div>
             <div class="column is-half">
-                <div class="box box-shadow image-shadow">
+                <div class="box box-shadow image-shadow has-background-primary-90">
                     <figure class="image">
                         <img src="src/main/resources/static/Pics/mamaundvaddi.jpeg" alt="Unsere Mission">
                     </figure>
@@ -60,7 +96,7 @@
         <!-- Zweite Reihe -->
         <div class="columns is-vcentered">
             <div class="column is-half">
-                <div class="box box-shadow image-shadow">
+                <div class="box box-shadow image-shadow has-background-primary-90">
                     <figure class="image is-4by3">
                         <img src="src/main/resources/static/images/team.jpg" alt="Unser Team">
                     </figure>
@@ -74,10 +110,10 @@
                 </p>
             </div>
         </div>
-
     </div>
 </section>
 
+<div id="footer"></div>
 
 </body>
 </html>
